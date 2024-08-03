@@ -2,7 +2,7 @@ const { User } = require('../models')
 
 const { signToken } = require('../utils/auth')
 
-module.exports = {
+const resolvers = {
     Query: {
         // get a single User
         user: async (parent, { _id }) => {
@@ -14,4 +14,6 @@ module.exports = {
     Mutation: {
         // create new user with token
     },
-}
+};
+
+module.exports = resolvers;
