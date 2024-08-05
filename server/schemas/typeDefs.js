@@ -21,10 +21,14 @@ user: User
 }
 
 type Query {
-users: 
+users: User
+user(username: String!)
 }
 
 type Mutation {
+addUser
 
 }
 `;
+
+module.exports = typeDefs;
