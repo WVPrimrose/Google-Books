@@ -45,7 +45,7 @@ const resolvers = {
             }
             throw AuthenticationError;
         },
-        deleteBook: async (parent, { user, params }, context) => {
+    removeBook: async (parent, { user, params }, context) => {
             if (context.user) {
                 const book = await Book.findOneAndUpdate(
                     { _id: user._id },
