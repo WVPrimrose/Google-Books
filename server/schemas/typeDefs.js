@@ -22,13 +22,30 @@ user: User
 
 type Query {
 users: User
-user(username: String, savedBooks: [Book])
 }
 
 type Mutation {
 addUser(
-)
-
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+): Auth
+login(
+    email: String!
+    password: String!
+): Auth
+saveBook(
+bookId: String!
+authors: [String]
+description: String!
+title: String!
+image: String
+link: String
+): User
+removeBook(
+    bookId: String!
+): User
 }
 `;
 
