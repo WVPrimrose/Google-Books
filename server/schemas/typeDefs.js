@@ -22,11 +22,12 @@ user: User
 
 type Query {
 users: User
-user(username: String!)
+user(username: String, savedBooks: [Book])
 }
 
 type Mutation {
-addUser
+addUser(
+)
 
 }
 `;
