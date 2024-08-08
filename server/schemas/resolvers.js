@@ -6,7 +6,7 @@ const resolvers = {
     Query: {
         // get a single User
         user: async (parent, { _id }) => {
-            const params = _id ? { _id } : {};
+            const params = _id ? { _id } : ""
             return User.find(params);
         },
     },
