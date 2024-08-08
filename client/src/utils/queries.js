@@ -15,4 +15,5 @@ export const QUERY_USER = gql`
       link
       }
     }
+  }
 `
